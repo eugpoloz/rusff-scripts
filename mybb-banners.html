@@ -1,5 +1,14 @@
-/* Ajax-powered mybb.ru or rusff.ru banners script */
+<!-- Блок баннеров -->
+<div class="bestfriends">
+  <div class="inner">
+  <!-- Сюда загружаются баннеры -->
+  </div>
+  <div class="button"><a href class="js-bestfriends-button">Баннеры</a></div>
+</div>
 
+<script>
+/* ПОДКЛЮЧЕНИЕ БАННЕРОВ ЧЕРЕЗ AJAX
+   СТАВИТЬ В HTML-ВЕРХ ИЛИ ОБЪЯВЛЕНИЕ */
 $(function() {
     $('.js-bestfriends-button').one('click', function(event) {
         $('.bestfriends .inner').load('/pages/banners #retrobanners');
@@ -23,3 +32,4 @@ $(function() {
         }
     });
 });
+</script>
