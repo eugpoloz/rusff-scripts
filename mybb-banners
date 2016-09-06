@@ -1,0 +1,25 @@
+/* Ajax-powered mybb.ru or rusff.ru banners script */
+
+$(function() {
+    $('.js-bestfriends-button').one('click', function(event) {
+        $('.bestfriends .inner').load('/pages/banners #retrobanners');
+    }).click(function(event) {
+        event.preventDefault();
+        $(this).mouseover(function() {
+            $(this).animate({'color': '#7f807a'}, 500);
+        }).mouseleave(function() {
+            $(this).animate({'color': '#ab1c51'}, 500);
+        });
+        if ( $('.bestfriends .inner').css('opacity') == '0' ) {
+            $('.bestfriends .inner').animate({'z-index': '5'}, 200, function() {
+                $(this).animate({opacity: '1'}, 500);
+            });
+            $(this).text('Закрыть');
+        } else {
+            $('.bestfriends .inner').animate({opacity: '0'}, 500, function() {
+                $(this).css('z-index', '-1');
+            });
+            $(this).text('Баннеры');
+        }
+    });
+});
