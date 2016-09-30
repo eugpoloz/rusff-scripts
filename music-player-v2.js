@@ -1,4 +1,5 @@
-// ВСТАВКА МУЗЫКИ И ПЛЕЙЛИСТОВ С ЯНДЕКС.МУЗЫКИ И ZIPPYSHARE, автор - грандоченька смерти @ https://github.io/eugpoloz
+/* ВСТАВКА МУЗЫКИ И ПЛЕЙЛИСТОВ С ЯНДЕКС.МУЗЫКИ И ZIPPYSHARE
+Автор - грандоченька смерти @ https://github.io/eugpoloz */
 $(function() {
 	$('.post-content').find('p').each(function() {
 		if ( (/\[audio\](?:[^\]])+\[\/audio\]/gi).test($(this).html()) == true ) {
